@@ -1,20 +1,25 @@
 const Pet = () => {
 
     return React.createElement("div", {}, [ //Create array of components (Pet attributes)
-        React.createElement("h1", {}, "PetName"), //component1 (name)
-        React.createElement("h2", {}, "PetSpecies"), //component2 (species)
-        React.createElement("h2", {}, "PetBreed") //component3 (breed)
+        React.createElement("h1", {}, "Chewy"), //component1 (name)
+        React.createElement("h2", {}, "Cat"), //component2 (species)
+        React.createElement("h2", {}, "Maine Coon"), //component3 (breed)
+        React.createElement("h2", {}, "Ginger") //component4 (Colour)
     ])
 };
 
 
 const App = () => {
     return React.createElement(
-        "div", //create tag called 'div'.. <div> tag
-        {}, //What are its Attributes
-        React.createElement("h1",{},"adopt me") //children to look at
-        //^^^creates a div, then creates a h1 within div and outputs text in h1
-    ) 
+        "div",
+        {},
+        [
+        React.createElement("h1",{},"adopt me"),
+        React.createElement(Pet),
+        React.createElement(Pet),
+        React.createElement(Pet)
+        ]
+        ) 
 };
 
 const container = document.getElementById("root");
