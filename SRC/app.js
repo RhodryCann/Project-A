@@ -1,10 +1,11 @@
-const Pet = () => {
-
-    return React.createElement("div", {}, [ //Create array of components (Pet attributes)
-        React.createElement("h1", {}, "Chewy"), //component1 (name)
-        React.createElement("h2", {}, "Cat"), //component2 (species)
-        React.createElement("h2", {}, "Maine Coon"), //component3 (breed)
-        React.createElement("h2", {}, "Ginger") //component4 (Colour)
+const Pet = (props) => {
+//add object props
+//one way data flow from App into Pet through props
+    return React.createElement("div", {}, [
+        React.createElement("h1", {}, props.name),
+        React.createElement("h2", {}, props.species),
+        React.createElement("h2", {}, props.breed),
+        React.createElement("h2", {}, props.colour)
     ])
 };
 
@@ -14,10 +15,25 @@ const App = () => {
         "div",
         {},
         [
-        React.createElement("h1",{},"adopt me"),
-        React.createElement(Pet),
-        React.createElement(Pet),
-        React.createElement(Pet)
+        React.createElement("h1",{},"adopt me"), // add Pet attributes
+        React.createElement(Pet, {
+            name: "Chewy",
+            species: "Cat",
+            breed: "Maine Coon",
+            colour: "Ginger"
+        }),
+        React.createElement(Pet, {
+            name: "Luna",
+            species: "Dog",
+            breed: "Havenese",
+            colour: "Black"
+        }),
+        React.createElement(Pet, {
+            name: "Tutti",
+            species: "Cat",
+            breed: "Short Hair",
+            colour: "Grey"
+        })
         ]
         ) 
 };
