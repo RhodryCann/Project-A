@@ -1,6 +1,8 @@
+//moving onto JSx & npm + prettier (for autoformatting)
+ 
 const Pet = (props) => {
-//add object props
-//one way data flow from App into Pet through props
+    //add object props
+    //one way data flow from App into Pet through props
     return React.createElement("div", {}, [
         React.createElement("h1", {}, props.name),
         React.createElement("h2", {}, props.species),
@@ -15,27 +17,27 @@ const App = () => {
         "div",
         {},
         [
-        React.createElement("h1",{},"adopt me"), // add Pet attributes
-        React.createElement(Pet, {
-            name: "Chewy",
-            species: "Cat",
-            breed: "Maine Coon",
-            colour: "Ginger"
-        }),
-        React.createElement(Pet, {
-            name: "Luna",
-            species: "Dog",
-            breed: "Havenese",
-            colour: "Black"
-        }),
-        React.createElement(Pet, {
-            name: "Tutti",
-            species: "Cat",
-            breed: "Short Hair",
-            colour: "Grey"
-        })
+            React.createElement("h1", {}, "adopt me"), // add Pet attributes
+            React.createElement(Pet, {
+                name: "Chewy",
+                species: "Cat",
+                breed: "Maine Coon",
+                colour: "Ginger"
+            }),
+            React.createElement(Pet, {
+                name: "Luna",
+                species: "Dog",
+                breed: "Havenese",
+                colour: "Black"
+            }),
+            React.createElement(Pet, {
+                name: "Tutti",
+                species: "Cat",
+                breed: "Short Hair",
+                colour: "Grey"
+            })
         ]
-        ) 
+    )
 };
 
 const container = document.getElementById("root");

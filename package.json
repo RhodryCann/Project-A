@@ -1,0 +1,23 @@
+{
+  "name": "Project-A",
+  "version": "1.0.0",
+  "description": "I have created this repo to track my progress learning React via Brian Holts' React-V8 course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RhodryCann/Project-A.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RhodryCann/Project-A/issues"
+  },
+  "homepage": "https://github.com/RhodryCann/Project-A#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
