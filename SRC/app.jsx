@@ -1,6 +1,6 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';  *includes entire library - use {} to specify exactly what from the library is included
-import { createRoot } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 const Pet = (props) => {
   return React.createElement("div", {}, [
